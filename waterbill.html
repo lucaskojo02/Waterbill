@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Bill System</title>
+    <link rel="stylesheet" href="waterbill.css">
+</head>
+<body>
+    <form id="waterbill">
+        <table border="1" cellspacing="1" cellpadding="10">
+            <tr>
+                <th colspan="2">WATER BILING SYSTEM</th>
+            </tr>
+            <tr>
+                <td>Name of Customer</td>
+                <td><input type="text" id="name" required></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td><input type="text" id="address" required></td>
+            </tr>
+            <tr>
+                <td>Telephone Number:</td>
+                <td><input type="tel" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}-[0-9]{3}" id="telephone" required></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <select name="gender" id="gender">
+                        <option value="" selected>Select 
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Prefer not to say"></option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Marital Status</td>
+                <td>
+                    <select name="marital" id="relationship">
+                        <optgroup label="Marital Status">
+                            <option value="" selected>Select</option>
+                            <option value="Single">Single</option>
+                            <option value="Engaged">Engaged</option>
+                            <option value="Widowed">Widowed</option>
+                            <option value="Separated">Separated</option>
+                            <option value="Living Together">Living Together</option>
+                            <option value="Civil Partnership">Civil Partnership</option>
+                            <option value="In a Relationship">In a Relationship</option>
+                            <option value="Married">Married</option>
+                            <option value="Divorced">Divorced</option>
+                        </optgroup>
+                        <optgroup label="Other">
+                            <option value="Prefer not to say">Prefer not to say</option>
+                        </optgroup>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Previous Reading Date:</td>
+                <td><input type="date" id="previousdate" required></td>
+            </tr>
+            <tr>
+                <td>Current Reading Date:</td>
+                <td><input type="date" id="currentdate" required></td>
+            </tr>
+            <tr>
+                <td>Previous Meter Reading:</td>
+                <td><input type="number" id="previous" min="1" required></td>
+            </tr>
+            <tr>
+                <td>Current Meter Reading:</td>
+                <td><input type="number" id="current" min="1" required></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button id="total">Submit</button></td>
+            </tr>
+        </table>
+    </form>
+    <script src="waterbill.js"></script>
+</body>
+</html>
